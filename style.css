@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.container {
+  text-align: center;
+  color: gray;
+}
+
+.container > p {
+  text-align: center;
+  color: #8cd3ff;
+  font-weight: bold;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: #8cd3ff;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.reset {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(255, 217, 252);
+  border-radius: 30px;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-appearance: none; /*iOS Safari초기화*/
+}
+
+.reset:hover {
+  font-weight: bold;
+  opacity: 1;
+  color: gray;
+}
+
+.wrapper_reset {
+  text-align: center;
+}
