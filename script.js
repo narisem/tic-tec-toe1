@@ -7,7 +7,14 @@ const handleClick = (e) => {
   // 勝者がいるか、または引き分けかどうかをチェック
   // 勝者の判定ロジックをここに実装...
   // プレイヤーを切り替え
-  currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+  // currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+  if (currentPlayer === 'O') {
+    currentPlayer = 'X';
+  } else if (currentPlayer === 'X') {
+    currentPlayer = 'O'
+  }
+
+   updateTurnDisplay();
 };
 
 cells.forEach(cell => {
