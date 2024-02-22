@@ -1,36 +1,48 @@
+* .html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .container {
     text-align: center;
     color: gray;
 }
 
-.container > p {
-    text-align: center;
+.turn-display {
+    padding-left: 300px;
+    padding-top: 0;
     color: #8cd3ff;
     font-weight: bold;
 }
 
-#gameBoard {
+
+table {
+    // border-collapse: collapse;
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
-    margin: 20px;
+    margin: 20px auto; 
     justify-content: center;
     align-items: center;
-    padding: 50px;
     color: #8cd3ff;
-}
-.cell {
     width: 100px;
     height: 100px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    cursor: pointer;
 }
 
+td {
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    // margin: 10px;
+    font-size: 40px;
+    background-color: #f0f0f0;
+}
+
+
 .reset {
+    display: block; // ブロックレベル要素に変更
     width: 100px;
     height: 50px;
     background-color: rgb(255, 217, 252);
@@ -39,15 +51,20 @@
     color: gray;
     cursor: pointer;
     opacity: 0.5;
-    -webkit-appearance:none;/*iOS Safari초기화*/
+    -webkit-appearance: none; //iOS Safariのデフォルトスタイルを無効化
+
+    &:hover {
+        font-weight: bold;
+        opacity: 1;
+        color: gray;
+    }
 }
 
-.reset:hover {
-    font-weight:bold;
-    opacity: 1;
-    color: gray;
-}
- 
-.wrapper_reset {
-   text-align: center;
+
+
+.under {
+    color: #faa192;
+    font-size: 2rem;
+    margin-top: 300px;
+    text-align: center;
 }
